@@ -9,6 +9,7 @@ let firstNumber = '';
 let secondNumber = '';
 let operation = '';
 
+
 // Function to append a number to the display
 function appendNumber(num) {
     if (operation === '') {
@@ -20,6 +21,7 @@ function appendNumber(num) {
     }
 }
 
+
 // Function to set the operation
 function setOperation(op) {
     operation = op;
@@ -28,7 +30,10 @@ function setOperation(op) {
 
 // Function to clear the display
 function clearDisplay() {
-    // Do this
+    operation = '';
+    firstNumber = '';
+    secondNumber = '';
+    display.value = '';
 
 }
 
@@ -39,7 +44,19 @@ function calculate() {
     let num1 = parseFloat(firstNumber);
     let num2 = parseFloat(secondNumber);
 
-    // Do this
+
+    if (operation === '+') {
+        result = num1 + num2;
+    } else if (operation === '-') {
+        result = num1 - num2;
+    } else if (operation === '*') {
+        result = num1 * num2;
+    } else if (operation === '/') {
+        result = num1 / num2;
+    } else {
+        result = num1;
+    }
+    
 
     display.value = result;
     firstNumber = result.toString();

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Add the following line to include the external styles.css file -->
+     <link rel="stylesheet" href="styles.css">
 
     <title>Calculator</title>
     <style>
@@ -12,12 +13,30 @@
     </style>
 </head>
 <body>
-    <input type="text" id="display" readonly>
-    <br>
+
+    <input type="text" id="display" readonly class="box">
+    <div class="buttons">
+    <button onclick="appendNumber(1)">1</button>
+    <button onclick="appendNumber(2)">2</button>
+    <button onclick="appendNumber(3)">3</button>
+    <button onclick="clearDisplay('AC')">AC</button> <!--enter/produce result-->
+    <!--<br>-->
+    <button onclick="appendNumber(4)">4</button>
+    <button onclick="appendNumber(5)">5</button>
+    <button onclick="appendNumber(6)">6</button>
+    <button onclick="setOperation('/')">/</button>
+    <!--<br>-->
     <button onclick="appendNumber(7)">7</button>
     <button onclick="appendNumber(8)">8</button>
     <button onclick="appendNumber(9)">9</button>
+    <button onclick="setOperation('*')">*</button>
+    <!--<br>-->
+    <button onclick="appendNumber(0)">0</button>
+    <!--<button onclick="appendChar('.')">.</button>  append character?-->
+    <button onclick="calculate('=')">=</button> <!--enter/produce result-->
     <button onclick="setOperation('+')">+</button>
+    <button onclick="setOperation('-')">-</button>
+    </div>
     
 </body>
 
