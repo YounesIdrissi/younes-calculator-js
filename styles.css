@@ -24,9 +24,12 @@ body {
 }
 
 .box {
+    position: absolute;
+    top: 150px;
+    left: 592.5px;
+    z-index: 12px;
     padding: 1rem;
     margin-bottom: 1rem;
-    border: 3px solid #2C9901;
     
 }
 
